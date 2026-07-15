@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nelson Cardaci — iOS Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #f5f5f7;
+            --card-bg: #fff;
+            --text: #1d1d1f;
+            --text-secondary: #6e6e73;
+            --accent: #007aff;
+            --radius: 20px;
+        }
+
+        body {
+            font-family: -apple-system, 'Helvetica Neue', 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        header .links {
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        header .links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        header .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Summary */
+        .summary {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .summary h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .summary p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        /* App Grid */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .app-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .app-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .app-card .icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            background: #f0f0f0;
+            object-fit: cover;
+        }
+
+        .app-card h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .app-card .company {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .app-card p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .app-card .tech {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .app-card .tech span {
+            background: #e9e9ed;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .app-card .store-link {
+            display: inline-block;
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .app-card .store-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Enterprise badge */
+        .badge {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 28px; }
+            .app-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Nelson Cardaci</h1>
+            <p>Senior iOS Developer · 15+ Years · Enterprise B2B</p>
+            <div class="links">
+                <a href="mailto:nelson@cardaci.org">nelson@cardaci.org</a>
+                <a href="https://linkedin.com/in/nelson-cardaci-3bb13b5">LinkedIn</a>
+                <a href="https://github.com/nelsoncardaci">GitHub</a>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <div class="summary">
+            <h2>Who I am</h2>
+            <p>
+                Senior iOS Developer and Team Lead with 15+ years of hands-on experience building
+                enterprise and consumer iOS apps at scale — from logistics terminals serving 200+ daily
+                drivers to messaging frameworks powering millions of users across WindTre, TIM, and
+                Vodafone. I specialise in <strong>offline-first architecture, Swift Concurrency,
+                CoreData, and CI/CD automation</strong>.
+            </p>
+        </div>
+
+        <!-- Apps -->
+        <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 20px;">Apps I've Built</h2>
+        <div class="app-grid">
+
+            <!-- STRABAG myAPPS -->
+            <div class="app-card">
+                <img class="icon" src="icons/strabag-myapps.jpg" alt="STRABAG myAPPS icon" loading="lazy">
+                <h3>STRABAG myAPPS</h3>
+                <div class="company">STRABAG BRVZ GmbH · Enterprise</div>
+                <p>
+                    Secure enterprise iOS platform acting as a hub for internal tools and services.
+                    Built with SwiftUI, offline-first CoreData sync, OAuth/SAML (MSAL/Azure AD),
+                    and a custom JS↔Swift bridge for PWA integration.
+                </p>
+                <div class="tech">
+                    <span>SwiftUI</span>
+                    <span>CoreData</span>
+                    <span>OAuth/SAML</span>
+                    <span>SPM</span>
+                </div>
+                <a class="store-link" href="https://apps.apple.com/app/strabag-myapps/id1607815138" target="_blank">
+                    View on App Store →
+                </a>
+            </div>
+
+            <!-- IRIS Site -->
+            <div class="app-card">
+                <img class="icon" src="icons/iris-site.jpg" alt="IRIS Site icon" loading="lazy">
+                <h3>IRIS Site</h3>
+                <div class="company">STRABAG BRVZ GmbH · Enterprise</div>
+                <p>
+                    Mobile access to project information for construction site teams.
+                    Seamless switch between web and mobile, with digital access to all
+                    project data on-site.
+                </p>
+                <div class="tech">
+                    <span>Swift</span>
+                    <span>REST APIs</span>
+                </div>
+                <a class="store-link" href="https://apps.apple.com/app/iris-site/id1494444140" target="_blank">
+                    View on App Store →
+                </a>
+            </div>
+
+            <!-- U Check Intermodal -->
+            <div class="app-card">
+                <img class="icon" src="icons/ucheck.jpg" alt="U Check Intermodal icon" loading="lazy">
+                <h3>U Check Intermodal</h3>
+                <div class="company">Hupac Intermodal SA · Logistics</div>
+                <p>
+                    Terminal operations app for drivers and staff. Real-time tracking,
+                    digital queue management, ETA sharing, and terminal dashboards.
+                    Optimised for harsh industrial environments with offline persistence.
+                </p>
+                <div class="tech">
+                    <span>SwiftUI</span>
+                    <span>CoreData</span>
+                    <span>REST APIs</span>
+                    <span>Offline-first</span>
+                </div>
+                <a class="store-link" href="https://apps.apple.com/app/u-check-intermodal/id1616149791" target="_blank">
+                    View on App Store →
+                </a>
+            </div>
+
+            <!-- WINDTRE -->
+            <div class="app-card">
+                <img class="icon" src="icons/windtre.jpg" alt="WINDTRE icon" loading="lazy">
+                <h3>WINDTRE</h3>
+                <div class="company">WindTre · Consumer</div>
+                <p>
+                    Flagship consumer app for WindTre subscribers. Integrated EIMe 2
+                    real-time XMPP messaging framework for in-app customer care chat
+                    and chatbot communication — serving millions of users.
+                </p>
+                <div class="tech">
+                    <span>XMPP</span>
+                    <span>Chat Framework</span>
+                    <span>UIKit</span>
+                </div>
+                <a class="store-link" href="https://apps.apple.com/app/windtre/id492519547" target="_blank">
+                    View on App Store →
+                </a>
+            </div>
+
+            <!-- MyTIM -->
+            <div class="app-card">
+                <img class="icon" src="icons/mytim.jpg" alt="MyTIM icon" loading="lazy">
+                <h3>MyTIM</h3>
+                <div class="company">TIM · Consumer</div>
+                <p>
+                    Flagship consumer app for TIM subscribers. Integrated EIMe 2
+                    real-time messaging framework for in-app customer care chat
+                    and chatbot features — serving millions of users.
+                </p>
+                <div class="tech">
+                    <span>XMPP</span>
+                    <span>Chat Framework</span>
+                    <span>UIKit</span>
+                </div>
+                <a class="store-link" href="https://apps.apple.com/app/mytim/id378783815" target="_blank">
+                    View on App Store →
+                </a>
+            </div>
+
+            <!-- My Vodafone Italia -->
+            <div class="app-card">
+                <img class="icon" src="icons/myvodafone.jpg" alt="My Vodafone Italia icon" loading="lazy">
+                <h3>My Vodafone Italia</h3>
+                <div class="company">Vodafone · Consumer</div>
+                <p>
+                    Customer care and self-management app for Vodafone Italia subscribers.
+                    Contributed to customer-care and pre-sales features used by front-line
+                    support teams.
+                </p>
+                <div class="tech">
+                    <span>UIKit</span>
+                    <span>Customer Care</span>
+                </div>
+                <a class="store-link" href="https://apps.apple.com/app/my-vodafone-italia/id365804068" target="_blank">
+                    View on App Store →
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Enterprise-only apps -->
+        <h2 style="font-size: 18px; font-weight: 600; margin: 32px 0 16px;">Enterprise Apps (Internal Distribution)</h2>
+        <div style="background: var(--card-bg); border-radius: var(--radius); padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+
+            <div style="margin-bottom: 16px;">
+                <h3 style="font-size: 15px; font-weight: 600; margin-bottom: 4px;">DAMA — EuropAssistance</h3>
+                <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+                    iOS app for EuropAssistance claims management. Enterprise distribution
+                    (not on public App Store).
+                </p>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <h3 style="font-size: 15px; font-weight: 600; margin-bottom: 4px;">PostaPronta</h3>
+                <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+                    macOS application for mail handling. Enterprise distribution.
+                </p>
+            </div>
+
+            <div>
+                <h3 style="font-size: 15px; font-weight: 600; margin-bottom: 4px;">myMailHouse</h3>
+                <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+                    macOS application. Enterprise distribution.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Nelson Cardaci · <a href="mailto:nelson@cardaci.org">nelson@cardaci.org</a></p>
+        </footer>
+    </div>
+</body>
+</html>
